@@ -44,12 +44,12 @@ jobs:
 
       # run tests!
       - run: gradle test
-commands:
-  sayhello:
-    description: "hello"
-parameters: 
-  to: 
-    type: string
-default: "hello world"
-steps: 
-  - run:echo << parameters.to >>
+  commands:
+    sayhello:
+      description: "Hello"
+      parameters:
+        to:
+          type: string
+      default: "Hello World"
+septs:
+  -run echo << parameters.to >>
